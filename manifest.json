@@ -1,0 +1,17 @@
+{
+  "name": "Opscenter - Cassandra data viewer",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://opscenter:8443/*", "https://devopscenter:8443/*"],
+      "js": ["jquery.js", "KelpJSONView.js", "ext.js"],
+	  "all_frames": true
+    }
+  ],
+  "web_accessible_resources": ["KelpJSONView.css", "ext.css", "close.gif"]
+}
